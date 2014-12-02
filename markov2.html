@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="base fullscreen loaded">
+    <head>
+        
+        
+
+    </head>
+    <body class="reveal-viewport theme-font-league theme-color-grey-blue">
+    <canvas id="canvas"></canvas>
+        <script type="text/javascript">
+        
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var currNum = 0;
+        var curr = 1;
+        function draw() {
+            if (curr == 1) {
+                if (Math.random() > .9) {
+                    curr = 2;
+                }
+            } else {
+                if (Math.random() < .1) {
+                    curr = 1;
+                }
+            }
+            if (curr == 1) {
+                context.fillStyle = '#609686';
+            } else {
+                context.fillStyle = '#E44D2E';
+            }
+            var boxW = window.innerWidth / 10;
+            var boxH = window.innerHeight / 10;
+            context.fillRect(boxW * (currNum%10), (boxH * Math.floor(currNum / 10)) % window.innerHeight, boxW, boxH);
+            currNum++;
+            if (currNum < 100) {
+                draw();
+            }
+        }
+        draw();
+        
+</script>
+    </body>
+</html>
