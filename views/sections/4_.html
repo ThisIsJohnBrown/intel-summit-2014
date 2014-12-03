@@ -1,0 +1,191 @@
+<!-- end tools -->
+                
+
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Vanilla JS and canvas
+                    </h2>
+                    <div>
+                        <br>
+                    </div>
+                    <div><a href="example1.html">Example</a></div>
+                    <div>
+                        <pre>
+<code><font style="font-size: 32px;">var cvs = document.getElementById('canvas'),
+    ctx = canvas.getContext('2d');</font></code><code><font style="font-size: 32px;">
+function draw() {
+    <span style="font-family: monospace; font-size: 31.7028980255127px; font-style: normal; font-variant: normal;">ctx</span>.fillStyle = 'rgba(0, 0, 0, .1)';
+    <span style="font-family: monospace; font-size: 31.7028980255127px; font-style: normal; font-variant: normal;">ctx</span>.fillRect(0, 0, width, height);
+    <span style="font-family: monospace; font-size: 31.7028980255127px; font-style: normal; font-variant: normal;">ctx</span>.strokeRect(Math.random() * width,
+<span style="font-family: monospace; font-style: normal; font-variant: normal;">        </span><span style="font-family: monospace; font-style: normal; font-variant: normal;">Math.random() * height,</span><br></font></code><code><font style="font-size: 32px;"><span style="font-family: monospace; font-style: normal; font-variant: normal;">        </span><span style="font-family: monospace; font-style: normal; font-variant: normal;">Math.random() * width,</span><span style="font-family: monospace; font-style: normal; font-variant: normal;"><br></span></font></code><code><font style="font-size: 32px;"><span style="font-family: monospace; font-style: normal; font-variant: normal;">        </span><span style="font-family: monospace; font-style: normal; font-variant: normal;">Math.random() * height);</span><span style="font-family: monospace; font-style: normal; font-variant: normal;"><br></span></font></code><code><span style="font-family: monospace;"><font style="font-size: 32px;">    requestAnimFrame(draw);</font></span></code><code><font style="font-size: 32px;">}
+
+draw();</font>
+</code>
+</pre>
+                    </div>
+                    
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        P5.js
+                    </h2>
+                    <div>
+                        <br>
+                    </div>
+                    <pre>
+<code><font style="font-size: 32px;">function setup() {
+  createCanvas(640, 480);
+}
+
+function draw() {
+  if (mouseIsPressed) {
+    fill(0);
+  } else {
+    fill(255);
+  }
+  ellipse(mouseX, mouseY, 80, 80);
+}</font></code>
+</pre><br>
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Three.js
+                    </h2>
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        <pre>
+<code><font style="font-size: 32px;">var camera, scene, renderer;
+
+camera = new THREE.PerspectiveCamera(
+    70, width/height, 1, 5000);
+camera.position.z = 1500;
+
+scene = new THREE.Scene();
+
+renderer = new THREE.CSS3DRenderer();
+renderer.setSize(width, height); </font></code>
+</pre>
+                    </div><br>
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Three.js
+                    </h2>
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        <pre>
+<code><font style="font-size: 32px;">var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+var cube = new THREE.Mesh( geometry, material );
+scene.add( cube ); 
+
+function render() {
+    cube.rotation.x += 0.1;
+    cube.rotation.y += 0.1;
+    requestAnimationFrame( render );
+    renderer.render( scene, camera );
+}
+render();</font></code>
+</pre>
+                    </div><br>
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Input (not mouse/keyboard)
+                    </h2>
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Input (not mouse/keyboard)
+                    </h2>
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        Kinect
+                    </div>
+                    <img src="make-art-not-apps/kinect.jpg">
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Input (not mouse/keyboard)
+                    </h2>
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        Leap Motion
+                    </div>
+                    <img src="make-art-not-apps/leap.png">
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Input (not mouse/keyboard)
+                    </h2>
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        Myo
+                    </div>
+                    <img src="make-art-not-apps/myo.png">
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Input (not mouse/keyboard)
+                    </h2>
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        Neurosky Mindwave
+                    </div>
+                    <img src="make-art-not-apps/mindwave.jpg">
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Microcontrollers
+                    </h2>
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Microcontrollers
+                    </h2>
+                    <div>
+                        Raspberry Pi
+                    </div><img data-src="make-art-not-apps/812119-RaspberryPi.jpg" style="width: 731.690804275615px; height: 487.849637453107px; max-height: none; max-width: none;">
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Microcontrollers
+                    </h2>
+                    <div>
+                        Tessel
+                    </div><img data-src="make-art-not-apps/812109-Screenshot_2014-11-10_15.04.15.png" style="width: 791.304851497338px; height: 432.860507018324px; max-height: none; max-width: none;">
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Microcontrollers
+                    </h2><img data-src="make-art-not-apps/812123-Screenshot_2014-11-10_15.03.53.png" style="width: 853.679235973308px; height: 487.900362090788px; max-height: none; max-width: none;">
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        Nodebots
+                    </h2><img data-src="make-art-not-apps/812089-Screenshot_2014-11-10_14.58.18.png" style="width: 427.929110024081px; height: 325.204709916875px; max-height: none; max-width: none;"><img data-src="make-art-not-apps/812090-Screenshot_2014-11-10_14.58.29.png" style="width: 465.454945266533px; height: 324.471014264701px; max-height: none; max-width: none;">
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        Make some robots!
+                    </div>
+                </section>
+                <section data-background="make-art-not-apps/blankLarge-9-black.png">
+                    <h2>
+                        And more!
+                    </h2>
+                </section>
+                <!-- end tools -->
