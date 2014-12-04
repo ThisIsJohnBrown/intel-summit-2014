@@ -21,7 +21,6 @@ fs.readdir(__dirname + '/views/sections', function(err, files) {
         content += cutsheet;
       }
       content += fs.readFileSync(__dirname + '/views/sections/' + fileName + '.html');
-      console.log(fileName.substr(fileName.length - 1, 1));
       if (fileName.substr(fileName.length - 1, 1) === '_') {
         nextCut = true;
       }
